@@ -20,7 +20,7 @@ int main() {
 	all_input_ex = all_input;
 	for (k = 0;k < group;k++) { 
 		(*(G + k)) = 0;
-		for (;((*all_input_ex) != ' ')&&((*all_input_ex)!='\0');all_input_ex++) {
+		for (;((*all_input_ex) != ' ')&&((*all_input_ex)!='\0');all_input_ex++) { // 마지막 그룹을 셀 때 '\0'에서 멈추게 해야해서 &&로 추가
 			(*(G + k))++;
 		} // 배열 G에 그룹 인원수 기록 G+k는 G[k], 문법상 이렇게 적음 -> G[0]은 첫번째 그룹의 인원수를 저장, G[k]는 k+1번째 그룹의 인원수 저장
 		all_input_ex++; // 안의 for문으로만 끝나면 all_input_ex는 ' '을 가리키게 되므로 증가시켜서 그 다음 문자부터 가리키게 해야함
